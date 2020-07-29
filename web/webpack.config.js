@@ -3,10 +3,10 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   mode: 'production',
-  entry: [path.join(process.cwd(), 'sdk.js')],
+  entry: [path.join(process.cwd(), 'src/sdk.js')],
   output: {
       filename: 'sdk.min.js',
-      path: process.cwd()
+      path: path.join(process.cwd(), 'dist'),
   },
   optimization: {
     minimize: true,

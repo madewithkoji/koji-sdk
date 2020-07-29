@@ -20,7 +20,7 @@ deploy:
   bucket: "koji-test"
   region: "us-west-2"
   skip_cleanup: true
-  glob: "web/sdk.min.js"
+  local-dir: "web/dist"
   upload-dir: "sdk/v1"
 
 notifications:
