@@ -23,13 +23,12 @@
       document.execCommand('insertText', false, url);
     }
 
-    // Set the title
+    // Focus the title
     const titleInput = Array.from(document.getElementsByTagName('textarea'))
       .find((textarea) => (textarea.placeholder || '').toLowerCase() === 'title');
 
     if (titleInput) {
       titleInput.focus();
-      document.execCommand('insertText', false, title);
     }
   };
 
@@ -73,7 +72,7 @@
     }
 
     const { x, y, width, height } = e.target.getBoundingClientRect();
-    sendMessage('@@koji_sdk/SHOW_PICKER', {
+    sendMessage('@@koji_sdk/create/SHOW_PICKER', {
       top: y + height,
       left: x,
       origin: `${x + (width / 2)}px ${y + height}px`,
