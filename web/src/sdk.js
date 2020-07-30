@@ -57,6 +57,7 @@
           });
           overlay.style.opacity = '1';
           overlay.style.pointerEvents = 'all';
+          document.body.style.overflow = 'hidden';
         }
 
         // Collection frame has requested to show a feed
@@ -69,6 +70,7 @@
           });
           frame.style.opacity = '1';
           frame.style.pointerEvents = 'all';
+          document.body.style.overflow = 'hidden';
         }
 
         // Create overlay has loaded
@@ -84,6 +86,7 @@
           const frame = getOverlay();
           frame.style.opacity = '0';
           frame.style.pointerEvents = 'none';
+          document.body.style.overflow = 'auto';
         }
 
         // Create overlay did create post
@@ -92,6 +95,7 @@
           const frame = getOverlay();
           frame.style.opacity = '0';
           frame.style.pointerEvents = 'none';
+          document.body.style.overflow = 'auto';
 
           // Do something with the result
           // const { url, title } = data.payload;
@@ -103,6 +107,7 @@
           const frame = getFeed();
           frame.style.opacity = '0';
           frame.style.pointerEvents = 'none';
+          document.body.style.overflow = 'auto';
         }
       } catch (err) {
         //
