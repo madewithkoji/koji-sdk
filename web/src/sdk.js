@@ -130,8 +130,9 @@
       tag,
       width,
       height,
+      color,
     } = getCollection().dataset;
-    collection.src = `${baseUrl}/_embeds/collection?tag=${encodeURIComponent(tag)}`;
+    collection.src = `${baseUrl}/_embeds/collection?tag=${encodeURIComponent(tag)}&color=${encodeURIComponent(color)}`;
     collection.style = [
       'outline: none;',
       'border: none;',
