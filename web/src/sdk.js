@@ -10,6 +10,7 @@
     'left: 0;',
     'width: 100vw;',
     'height: 100vh;',
+    'overflow: hidden',
     'z-index: 8675309;',
     'transition: opacity 0.2s ease-in-out;',
     'pointer-events: none;',
@@ -58,6 +59,7 @@
           overlay.style.opacity = '1';
           overlay.style.pointerEvents = 'all';
           document.body.style.overflow = 'hidden';
+          document.body.style.height = '100%';
         }
 
         // Collection frame has requested to show a feed
@@ -71,6 +73,7 @@
           frame.style.opacity = '1';
           frame.style.pointerEvents = 'all';
           document.body.style.overflow = 'hidden';
+          document.body.style.height = '100%';
         }
 
         // Create overlay has loaded
@@ -87,6 +90,7 @@
           frame.style.opacity = '0';
           frame.style.pointerEvents = 'none';
           document.body.style.overflow = 'auto';
+          document.body.style.height = 'auto';
         }
 
         // Create overlay did create post
@@ -96,6 +100,7 @@
           frame.style.opacity = '0';
           frame.style.pointerEvents = 'none';
           document.body.style.overflow = 'auto';
+          document.body.style.height = 'auto';
 
           // Do something with the result
           // const { url, title } = data.payload;
@@ -108,6 +113,7 @@
           frame.style.opacity = '0';
           frame.style.pointerEvents = 'none';
           document.body.style.overflow = 'auto';
+          document.body.style.height = 'auto';
         }
       } catch (err) {
         //
