@@ -10,7 +10,7 @@
     'left: 0;',
     'width: 100vw;',
     'height: 100vh;',
-    'overflow: hidden',
+    'overflow: hidden;',
     'z-index: 8675309;',
     'transition: opacity 0.2s ease-in-out;',
     'pointer-events: none;',
