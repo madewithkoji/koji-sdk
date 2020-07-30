@@ -133,11 +133,23 @@
       color,
     } = getCollection().dataset;
     collection.src = `${baseUrl}/_embeds/collection?tag=${encodeURIComponent(tag)}&color=${encodeURIComponent(color)}`;
+
+    let resolvedWidth = width || '400';
+    if (resolvedWidth.indexOf('%') === -1) {
+      resolvedWidth = `${resolvedWidth}px`;
+    }
+
+    let resolvedHeight = height || '600';
+    if (resolvedHeight.indexOf('%') === -1) {
+      resolvedHeight = `${resolvedHeight}px`;
+    }
+
     collection.style = [
       'outline: none;',
       'border: none;',
-      `width: ${width || 400}px;`,
-      `height: ${height || 600}px;`,
+      `width: ${resolvedWidth};`,
+      `max-width: 100%;`,
+      `height: ${resolvedHeight};`,
       'pointer-events: all;',
     ].join(' ');
     collection.dataset.tag = tag;
